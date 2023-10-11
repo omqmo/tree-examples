@@ -1,0 +1,14 @@
+<tui-tree
+  *ngFor="let item of nav.tree().children"
+  [value]="item"
+  [content]="content"
+  [map]="nav.toggles"
+  [tuiTreeController]="true"
+  [childrenHandler]="handler"
+></tui-tree>
+
+<ng-template #content let-item let-node="node">
+  <div class="content">
+    <div class="label">{{ item.name }}</div>
+  </div>
+</ng-template>
